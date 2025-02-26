@@ -56,6 +56,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
                         src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
                         alt={movie.name}
                         className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                        onError={(e) => (e.target.style.display = "none")}
                     />
                 ))}
             </div>
